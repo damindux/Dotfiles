@@ -1,0 +1,20 @@
+/*
+
+# Neovim
+!/nvim/
+/nvim/lazy-lock.json
+
+# Fish shell
+!/fish/
+/fish/completions
+/fish/conf.d
+/fish/functions
+/fish/fish_variables
+
+# Other
+!/kitty/
+!/README
+
+# gitignore
+!/.gitignore
+
