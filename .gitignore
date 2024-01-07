@@ -11,6 +11,10 @@
 /fish/functions
 /fish/fish_variables
 
+# Tmux
+!/tmux/
+/tmux/plugins
+
 # Other
 !/kitty/
 !/README.md
