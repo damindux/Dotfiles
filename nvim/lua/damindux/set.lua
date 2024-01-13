@@ -13,7 +13,8 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+vim.opt.cursorline = true
 
-vim.opt.signcolumn = "number"
+vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 
