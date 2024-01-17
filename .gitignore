@@ -18,6 +18,8 @@
 # Other
 !/kitty/
 !/README.md
+!/polybar
+!/i3
 
 # gitignore
 !/.gitignore
