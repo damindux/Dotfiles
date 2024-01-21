@@ -20,6 +20,7 @@
 !/README.md
 !/polybar
 !/i3
+!/rofi/
 
 # gitignore
 !/.gitignore

@@ -160,7 +160,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 
 assign [class="Spotify"] $ws5
-assign [class="firefox"] $ws2
+assign [class="microsoft-edge"] $ws2
 assign [class="kitty"] $ws1
 assign [class="discord"] $ws4
 assign [class="Emacs"] $ws3
@@ -251,6 +251,7 @@ bindsym $mod+control+h move workspace to output left
 
 exec_always xinput set-prop "SYNA32C5:00 06CB:CD50 Touchpad" "libinput Tapping Enabled" 1
 exec_always xinput set-prop "SYNA32C5:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1
+exec_always setxkbmap -option ctrl:swapcaps
 exec_always --no-startup-id feh --bg-fill /home/damindux/Pictures/fgo.jpg
 exec --no-startup-id picom
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
