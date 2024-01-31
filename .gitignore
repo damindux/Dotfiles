@@ -1,28 +1,31 @@
 /*
 
 # Neovim
-!/nvim/
-/nvim/lazy-lock.json
+!nvim/
+nvim/lazy-lock.json
+
+# Emacs
+!emacs/
+emacs/*
+!emacs/init.el
 
 # Fish shell
-!/fish/
-/fish/completions
-/fish/conf.d
-/fish/functions
-/fish/fish_variables
+!fish/
+fish/*
+!fish/config.fish
 
 # Tmux
-!/tmux/
-/tmux/plugins
+!tmux/
+tmux/plugins
 
 # Other
-!/kitty/
-!/README.md
-!/polybar
-!/i3
-!/awesome/
-!/rofi/
+!kitty/
+!README.md
+!polybar/
+!i3/
+!awesome/
+!rofi/
 
 # gitignore
-!/.gitignore
+!.gitignore
 

@@ -252,7 +252,7 @@ bindsym $mod+control+h move workspace to output left
 exec_always xinput set-prop "SYNA32C5:00 06CB:CD50 Touchpad" "libinput Tapping Enabled" 1
 exec_always xinput set-prop "SYNA32C5:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1
 exec_always setxkbmap -option ctrl:swapcaps
-exec_always --no-startup-id feh --bg-fill /home/damindux/Pictures/fgo.jpg
+exec_always --no-startup-id feh --bg-fill /home/damindux/Pictures/japanese_pedestrian_street.png
 exec --no-startup-id picom
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id ~/.config/polybar/launch.sh
