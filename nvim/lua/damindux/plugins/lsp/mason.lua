@@ -26,8 +26,9 @@ return {
                 "lua_ls",
                 "emmet_ls",
                 "ols",
+                "omnisharp"
             },
-            automatic_installation = true, 
+            automatic_installation = true,
         })
     end,
 }
