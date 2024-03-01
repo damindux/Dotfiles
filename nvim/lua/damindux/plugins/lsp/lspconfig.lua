@@ -104,7 +104,7 @@ return {
         })
 
         -- configure c# language server
-        lspconfig["omnisharp"].setup({
+        lspconfig["csharp_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
