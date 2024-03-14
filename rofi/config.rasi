@@ -1,19 +1,19 @@
 @import "default"
 
 * {
-	bg: #2C3E50;
-    cur: #2C3E50;
-    fgd: #EAEAEA;
+	bg: #38312b;
+    cur: #88ba80;
+    fgd: #88ba80;
     cmt: #93A1A1;
-    cya: #81A2BE;
-    grn: #A3BE8C;
+    cya: #adffff;
+    grn: #aeffa1;
     ora: #D08770;
-    pur: #C77C7C;
-    red: #D08770;
-    yel: #EBCB8B;
-    whi: #EAEAEA;
+    pur: #fccafc;
+    red: #f08484;
+    yel: #fffea6;
+    whi: #d1dbe3;
 
-	font: "CaskaydiaCove Nerd Font 11";
+	font: "JetBrainsMono NF 10";
 
 	foreground: @fgd;
 	background: @bg;

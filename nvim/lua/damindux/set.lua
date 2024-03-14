@@ -15,6 +15,6 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
 
-vim.opt.signcolumn = "yes"
+-- vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 

@@ -1,15 +1,13 @@
 return {
-    "neanias/everforest-nvim",
+    "tanvirtin/monokai.nvim",
     version = false,
     lazy = false,
     priority = 1000,
     config = function()
-        local everforest = require("everforest")
-        local color = "everforest"
+        local monokai = require("monokai")
+        local color = "monokai"
 
-        everforest.setup({
-            background = "soft",
-        })
+        monokai.setup()
 
         vim.cmd.colorscheme(color)
 

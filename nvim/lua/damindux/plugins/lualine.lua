@@ -6,7 +6,7 @@ return {
 
         luaLine.setup({
             options = {
-                theme = "everforest"
+                theme = "molokai"
             }
         })
     end,

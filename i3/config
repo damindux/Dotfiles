@@ -58,7 +58,7 @@ bindsym XF86AudioPrev exec playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty 
+bindsym $mod+Return exec wezterm 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -160,7 +160,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 
 assign [class="Spotify"] $ws5
-assign [class="microsoft-edge"] $ws2
+assign [class="Brave-browser"] $ws2
 assign [class="kitty"] $ws1
 assign [class="discord"] $ws4
 assign [class="Emacs"] $ws3
@@ -204,8 +204,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # gaps
- gaps inner 10
- gaps outer -4
+gaps inner 10
+gaps outer -4
 
 set $border              #88c0d0
 set $bg-color 	         #2f343f
@@ -240,8 +240,7 @@ for_window [class="^.*"] border pixel 1
 #}
 
 bindsym $mod+shift+x exec --no-startup-id  betterlockscreen -l blur
-bindsym $mod+b exec microsoft-edge
-bindsym $mod+shift+b exec vivaldi
+bindsym $mod+b exec brave-browser
 bindsym $mod+e exec pcmanfm
 bindsym $mod+c exec emacs
 bindsym $mod+p exec ~/.config/rofi/powermenu.sh
@@ -252,7 +251,7 @@ bindsym $mod+control+h move workspace to output left
 exec_always xinput set-prop "SYNA32C5:00 06CB:CD50 Touchpad" "libinput Tapping Enabled" 1
 exec_always xinput set-prop "SYNA32C5:00 06CB:CD50 Touchpad" "libinput Natural Scrolling Enabled" 1
 exec_always setxkbmap -option ctrl:swapcaps
-exec_always --no-startup-id feh --bg-fill /home/damindux/Pictures/japanese_pedestrian_street.png
+exec_always --no-startup-id feh --bg-fill /home/damindux/Pictures/wallhaven-85jq9k.jpg
 exec --no-startup-id picom
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id ~/.config/polybar/launch.sh
