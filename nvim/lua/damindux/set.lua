@@ -13,6 +13,9 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+vim.cmd [[
+  highlight CursorLine ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+]]
 vim.opt.cursorline = true
 
 -- vim.opt.signcolumn = "yes"

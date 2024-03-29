@@ -166,6 +166,7 @@ assign [class="discord"] $ws4
 assign [class="Emacs"] $ws3
 assign [class="Pcmanfm"] $ws6
 assign [class="obsidian"] $ws7
+assign [class="code"] $ws3
 
 for_window [class="Spotify"] floating enable
 for_window [class="discord"] floating enable

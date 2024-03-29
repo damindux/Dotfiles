@@ -43,9 +43,9 @@
     (package-install package)))
 
 ;; Load the theme
-(add-to-list 'custom-theme-load-path "~/.config/emacs/everforest-theme")
-(load-theme 'everforest-hard-dark t)
-;;(load-theme 'kanagawa t)
+;;(add-to-list 'custom-theme-load-path "~/.config/emacs/everforest-theme")
+;;(load-theme 'everforest-hard-dark t)
+(load-theme 'monokai t)
 
 ;; Configure smex
 (global-set-key (kbd "M-x") 'smex)
@@ -80,7 +80,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(all-the-icons doom-modeline kanagawa-theme smex org-superstar beacon magit org-download)))
+   '(monokai-theme all-the-icons doom-modeline kanagawa-theme smex org-superstar beacon magit org-download)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
