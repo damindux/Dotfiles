@@ -13,5 +13,7 @@ return {
 
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        vim.api.nvim_set_hl(0, "LineNr", { bg = "none", fg = "#4b5263" })
+        vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none" })
     end,
 }
