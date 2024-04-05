@@ -205,8 +205,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # gaps
-gaps inner 10
-gaps outer -4
+# gaps inner 10
+# gaps outer -4
 
 set $border              #88c0d0
 set $bg-color 	         #2f343f
