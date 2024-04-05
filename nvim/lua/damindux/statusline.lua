@@ -21,9 +21,17 @@ local modes = {
   ["t"] = "TERMINAL",
 }
 
+local function capitalize(word)
+    if word == nil then return nil end
+    local firstLetter = string.sub(word, 1, 1)
+    local rest = string.sub(word, 2)
+    return string.upper(firstLetter) .. string.lower(rest)
+end
+
 local function mode()
   local current_mode = vim.api.nvim_get_mode().mode
-  return string.format(" %s ", modes[current_mode]):upper()
+    local mode_name = capitalize(modes[current_mode])
+  return string.format(" %s ", mode_name)
 end
 
 local function update_mode_colors()
@@ -107,23 +115,53 @@ local function lineinfo()
   return " %P %l:%c "
 end
 
+local vcs = function()
+  local git_info = vim.b.gitsigns_status_dict
+  if not git_info or git_info.head == "" then
+    return ""
+  end
+  local added = git_info.added and ("%#GitSignsAdd#+" .. git_info.added .. " ") or ""
+  local changed = git_info.changed and ("%#GitSignsChange#~" .. git_info.changed .. " ") or ""
+  local removed = git_info.removed and ("%#GitSignsDelete#-" .. git_info.removed .. " ") or ""
+  if git_info.added == 0 then
+    added = ""
+  end
+  if git_info.changed == 0 then
+    changed = ""
+  end
+  if git_info.removed == 0 then
+    removed = ""
+  end
+    return table.concat {
+        " ",
+        added,
+        changed,
+        removed,
+        " ",
+        "%#GitSignsAdd# ",
+        git_info.head,
+        " %#Statusline#",
+    }
+end
+
 Statusline = {}
 
 Statusline.active = function()
-  return table.concat {
-    "%#Statusline#",
-    update_mode_colors(),
-    mode(),
-    "%#Statusline# ",
-    filepath(),
-    filename(),
-    "%#Statusline#",
-    "%=%#Statusline#",
-    lsp(),
-    "%#Statusline#",
-    filetype(),
-    lineinfo(),
-  }
+    return table.concat {
+        "%#Statusline#",
+        update_mode_colors(),
+        mode(),
+        "%#Statusline#",
+        filepath(),
+        filename(),
+        "%#Statusline#",
+        "%=%#StatuslineInsert#",
+        vcs(),
+        lsp(),
+        "%#Statusline#",
+        filetype(),
+        lineinfo(),
+    }
 end
 
 function Statusline.inactive()
@@ -143,31 +181,3 @@ vim.api.nvim_exec([[
   augroup END
 ]], false)
 
-local vcs = function()
-  local git_info = vim.b.gitsigns_status_dict
-  if not git_info or git_info.head == "" then
-    return ""
-  end
-  local added = git_info.added and ("%#GitSignsAdd#+" .. git_info.added .. " ") or ""
-  local changed = git_info.changed and ("%#GitSignsChange#~" .. git_info.changed .. " ") or ""
-  local removed = git_info.removed and ("%#GitSignsDelete#-" .. git_info.removed .. " ") or ""
-  if git_info.added == 0 then
-    added = ""
-  end
-  if git_info.changed == 0 then
-    changed = ""
-  end
-  if git_info.removed == 0 then
-    removed = ""
-  end
-  return table.concat {
-     " ",
-     added,
-     changed,
-     removed,
-     " ",
-     "%#GitSignsAdd# ",
-     git_info.head,
-     " %#Normal#",
-  }
-end
