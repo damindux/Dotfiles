@@ -109,6 +109,12 @@ return {
             on_attach = on_attach,
         })
 
+        -- configure go language server
+        lspconfig["gopls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
         -- configure emmet language server
         lspconfig["emmet_ls"].setup({
             capabilities = capabilities,
