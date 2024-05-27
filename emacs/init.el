@@ -34,8 +34,12 @@
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
-(add-to-list 'custom-theme-load-path "~/.config/emacs/everforest-theme")
-(load-theme 'everforest-hard-dark t)
+(add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")
+(load-theme 'custom-green t)
+
+;; set transparency
+(set-frame-parameter (selected-frame) 'alpha '(85 85))
+(add-to-list 'default-frame-alist '(alpha 85 85))
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)

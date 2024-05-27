@@ -1,23 +1,23 @@
 @import "default"
 
 * {
-	bg:  #2D353B;
-    cur: #D3C6AA;
-    fgd: #D3C6AA;
+	bg:  #2E6357;
+    cur: #FFFFFF;
+    fgd: #FFFFFF;
     cmt: #93A1A1;
     cya: #83C092;
-    grn: #A7C080;
+    grn: #6BB56C;
     ora: #fd971f;
     pur: #D699B6;
     red: #E67E80;
     yel: #DBBC7F;
-    whi: #D3C6AA;
+    whi: #FFFFFF;
 
-	font: "RecMonoCasual Nerd Font 10";
+	font: "RecMonoDuotone Nerd Font 10";
 
 	foreground: @fgd;
 	background: @bg;
-	active-background: @grn;
+	active-background: @whi;
 	urgent-background: @red;
 
 	selected-background: @active-background;
@@ -130,7 +130,7 @@
 }
 #textbox-prompt-colon {
 	expand:     false;
-	str:        " ->";
+	str:        " =>";
 	margin:     0px 0.3em 0em 0em;
 	text-color: @whi;
 }
