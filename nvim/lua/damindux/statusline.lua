@@ -87,25 +87,27 @@ local function lsp()
   local warnings = ""
   local hints = ""
   local info = ""
+  local space = " "
 
   if count["errors"] ~= 0 then
-    errors = " %#LspDiagnosticsSignError# " .. count["errors"]
+    errors = " %#LspDiagnosticsSignError# " .. count["errors"] .. space
   end
   if count["warnings"] ~= 0 then
-    warnings = " %#LspDiagnosticsSignWarning# " .. count["warnings"]
+    warnings = " %#LspDiagnosticsSignWarning# " .. count["warnings"] .. space
   end
   if count["hints"] ~= 0 then
-    hints = " %#LspDiagnosticsSignHint# " .. count["hints"]
+    hints = " %#LspDiagnosticsSignHint# " .. count["hints"] .. space
   end
   if count["info"] ~= 0 then
-    info = " %#LspDiagnosticsSignInformation# " .. count["info"]
+    info = " %#LspDiagnosticsSignInformation# " .. count["info"] .. space
   end
 
-  return errors .. warnings .. hints .. info .. "%#Normal#"
+  return errors .. warnings .. hints .. info
 end
 
 local function filetype()
-  return string.format(" %s ", vim.bo.filetype):upper()
+    local file_type = capitalize(vim.bo.filetype)
+    return string.format(" %s ", file_type)
 end
 
 local function lineinfo()
@@ -116,13 +118,14 @@ local function lineinfo()
 end
 
 local vcs = function()
+  local space = " "
   local git_info = vim.b.gitsigns_status_dict
   if not git_info or git_info.head == "" then
     return ""
   end
-  local added = git_info.added and ("%#GitSignsAdd#+" .. git_info.added .. " ") or ""
-  local changed = git_info.changed and ("%#GitSignsChange#~" .. git_info.changed .. " ") or ""
-  local removed = git_info.removed and ("%#GitSignsDelete#-" .. git_info.removed .. " ") or ""
+  local added = git_info.added and (space .. "%#GitSignsAdd#+" .. git_info.added .. " ") or ""
+  local changed = git_info.changed and (space .. "%#GitSignsChange#~" .. git_info.changed .. " ") or ""
+  local removed = git_info.removed and (space .. "%#GitSignsDelete#-" .. git_info.removed .. " ") or ""
   if git_info.added == 0 then
     added = ""
   end
@@ -133,14 +136,13 @@ local vcs = function()
     removed = ""
   end
     return table.concat {
-        " ",
         added,
         changed,
         removed,
         " ",
         "%#GitSignsAdd# ",
         git_info.head,
-        " %#Statusline#",
+        " %#GitSignsAdd#",
     }
 end
 
@@ -155,7 +157,7 @@ Statusline.active = function()
         filepath(),
         filename(),
         "%#Statusline#",
-        "%=%#StatuslineInsert#",
+        "%=%#GitSignsAdd#",
         vcs(),
         lsp(),
         "%#Statusline#",

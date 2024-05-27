@@ -9,13 +9,13 @@ return {
         numhl = false,
     })
 
-    vim.cmd("highlight GitSignsAdd guifg=#879a39 guibg=#1C1B1A")
-    vim.cmd("highlight GitSignsChange guifg=#d0a215 guibg=#1C1B1A")
-    vim.cmd("highlight GitSignsDelete guifg=#d14d41 guibg=#1C1B1A")
+    vim.cmd("highlight GitSignsAdd guifg=#A7C080 guibg=#2D353B")
+    vim.cmd("highlight GitSignsChange guifg=#DBBC7F guibg=#2D353B")
+    vim.cmd("highlight GitSignsDelete guifg=#E67E80 guibg=#2D353B")
 
-    vim.cmd("highlight LineNrAdd guifg=#879a39")
-    vim.cmd("highlight LineNrChange guifg=#d0a215")
-    vim.cmd("highlight LineNrDelete guifg=#d14d41")
+    vim.cmd("highlight LineNrAdd guifg=#A7C080")
+    vim.cmd("highlight LineNrChange guifg=#DBBC7F")
+    vim.cmd("highlight LineNrDelete guifg=#E67E80")
 
     vim.cmd("highlight SignColumn guibg=NONE")
   end,

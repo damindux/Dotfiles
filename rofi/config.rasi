@@ -1,23 +1,23 @@
 @import "default"
 
 * {
-	bg:  #000000;
-    cur: #f8f8f0;
-    fgd: #f8f8f0;
+	bg:  #2D353B;
+    cur: #D3C6AA;
+    fgd: #D3C6AA;
     cmt: #93A1A1;
-    cya: #66d9ef;
-    grn: #a6e22e;
+    cya: #83C092;
+    grn: #A7C080;
     ora: #fd971f;
-    pur: #ae81ff;
-    red: #e95678;
-    yel: #e6db74;
-    whi: #f8f8f0;
+    pur: #D699B6;
+    red: #E67E80;
+    yel: #DBBC7F;
+    whi: #D3C6AA;
 
-	font: "JetBrainsMono NF 10";
+	font: "RecMonoCasual Nerd Font 10";
 
 	foreground: @fgd;
 	background: @bg;
-	active-background: @cya;
+	active-background: @grn;
 	urgent-background: @red;
 
 	selected-background: @active-background;
