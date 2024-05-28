@@ -20,20 +20,6 @@
              '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(defvar my/packages
-  '(org-download
-    magit
-    org-superstar
-    smex
-    clojure-mode)
-  "List of packages to install")
-
-(unless package-archive-contents
-  (package-refresh-contents))
-(dolist (pkg my/packages)
-  (unless (package-installed-p pkg)
-    (package-install pkg)))
-
 (add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")
 (load-theme 'custom-green t)
 
@@ -65,16 +51,3 @@
 ;; clojure-mode
 (add-hook 'clojure-mode-hook #'paredit-mode)
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(crystal-mode clojure-mode smex org-superstar org-download magit)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

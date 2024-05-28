@@ -8,6 +8,7 @@ nvim/lazy-lock.json
 !emacs/
 emacs/*
 !emacs/init.el
+!emacs/themes/
 
 # Fish shell
 !fish/
@@ -25,6 +26,7 @@ tmux/plugins
 !i3/
 !awesome/
 !rofi/
+!wezterm/
 
 # gitignore
 !.gitignore
