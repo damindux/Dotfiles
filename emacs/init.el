@@ -10,7 +10,8 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-(set-frame-font "RecMonoDuotone Nerd Font 12" nil t)
+(set-frame-font "AnonymicePro Nerd Font 13" nil t)
+(setq tab-width 4)
 
 (require 'ido)
     (ido-mode t)
@@ -21,11 +22,11 @@
 (package-initialize)
 
 (add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")
-(load-theme 'custom-green t)
+(load-theme 'automata t)
 
 ;; set transparency
-(set-frame-parameter (selected-frame) 'alpha '(85 85))
-(add-to-list 'default-frame-alist '(alpha 85 85))
+;;(set-frame-parameter (selected-frame) 'alpha '(95 95))
+;;(add-to-list 'default-frame-alist '(alpha 95 95))
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -51,3 +52,16 @@
 ;; clojure-mode
 (add-hook 'clojure-mode-hook #'paredit-mode)
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(go-mode cmake-mode smex org-download crystal-mode clojure-mode)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -14,7 +14,7 @@ function sd
         --pointer='→' \
         --header='find directory' \
         --header-first \
-        --color='dark,fg:bright-green')
+        --color='dark,fg:green')
     
     if test -n "$selected_directory"
         cd "$selected_directory"
@@ -31,7 +31,7 @@ function sf
         --pointer='→' \
         --header='find file' \
         --header-first \
-        --color='dark,fg:bright-green')
+        --color='dark,fg:green')
     
     if test -n "$selected_file"
         nvim "$selected_file"
@@ -44,6 +44,8 @@ fish_add_path ~/Stuff/Odin
 fish_add_path /usr/local/go/bin
 fish_add_path ~/.nvm
 fish_add_path ~/.dotnet/tools
+fish_add_path ~/.nimble/bin
+fish_add_path ~/flutter/bin
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

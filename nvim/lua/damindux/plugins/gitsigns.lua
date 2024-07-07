@@ -5,17 +5,22 @@ return {
     local gitsigns = require("gitsigns")
 
     gitsigns.setup({
-        signcolumn = true,
-        numhl = false,
+        signcolumn = false,
+        numhl = true,
     })
 
-    vim.cmd("highlight GitSignsAdd guifg=#6BB56C guibg=NONE")
-    vim.cmd("highlight GitSignsChange guifg=#FFFFFF guibg=NONE")
-    vim.cmd("highlight GitSignsDelete guifg=#2E6357 guibg=NONE")
+    vim.cmd("highlight GitSignsAdd guibg=NONE")
+    vim.cmd("highlight GitSignsChange guibg=NONE")
+    vim.cmd("highlight GitSignsDelete guibg=NONE")
 
-    vim.cmd("highlight LineNrAdd guifg=#6BB56C guibg=NONE")
-    vim.cmd("highlight LineNrChange guifg=#FFFFFF guibg=NONE")
-    vim.cmd("highlight LineNrDelete guifg=#2E6357 guibg=NONE")
+    vim.cmd("highlight GitSignsAddNr guibg=NONE")
+    vim.cmd("highlight GitSignsChangeNr guibg=NONE")
+    vim.cmd("highlight GitSignsDeleteNr guibg=NONE")
+
+    vim.cmd("highlight LineNr guibg=NONE")
+    vim.cmd("highlight LineNrAdd guibg=NONE")
+    vim.cmd("highlight LineNrChange guibg=NONE")
+    vim.cmd("highlight LineNrDelete guibg=NONE")
 
     vim.cmd("highlight SignColumn guibg=NONE")
   end,
